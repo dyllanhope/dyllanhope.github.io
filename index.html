@@ -1,46 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="simple-grid.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dyllan Hope</title>
 <style>
+img{
+    padding: 0px;
+    margin: 0px;
+}
 body{
     background-color: dimgrey;
 }
-@media(min-width:800px){
-    .titletop{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        font-size: 55px;
-        display:block;
-        width: 60%;
-        margin: auto;
-    }
-}
-.titletop{
+.nameFont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    font-size: 55px;
-}
-.titletop img{
-    float: right;
-    border: 2px solid black;
+    font-size: 70px;
 }
 .clearfix{
     overflow: auto;
     zoom:1;
 }
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: rgb(187, 187, 187);
+}
+.tab button.active {
+  background-color:darkgreen;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
 </style>
 </head>
 <body>
-    <div class="titletop clearfix">
-        <div>
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-3">
+            <h1><u class="nameFont">Dyllan Hope</u></h1>
+        </div>
+        <div class="col-4">
             <img src="myself.jpg" alt="Picture of myself">
         </div>
-        <div>
-            <h1><u>Dyllan Hope</u></h1>
-        </div>
     </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, 'About')">About</button>
+        <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
+        <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
+    </div>
+    <div id="About" class="tabcontent">
+        <h3>About me</h3>
+        <p>Here is a little info about me.</p>
+    </div>
+          
+    <div id="FrontEnd" class="tabcontent">
+        <h3>Front End</h3>
+        <p>Here is my front end stuff.</p> 
+    </div>
+          
+    <div id="BackEnd" class="tabcontent">
+        <h3>Back End</h3>
+        <p>Here is my back end stuff.</p>
+    </div>
+    <script src="openInfo.js" charset="utf-8"></script>
 </body>
 </html>

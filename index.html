@@ -8,7 +8,10 @@
     <title>Dyllan Hope</title>
 <style>
 img{
-    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
     margin: 0px;
 }
 body{
@@ -56,34 +59,37 @@ body{
 </head>
 <body>
     <div class="row">
-        <div class="col-2">
-        </div>
-        <div class="col-3">
-            <h1><u class="nameFont">Dyllan Hope</u></h1>
-        </div>
-        <div class="col-4">
+        <div class="col-3 polaroid" style="margin-left: 5px">
             <img src="myself.jpg" alt="Picture of myself">
         </div>
+        <div class="col-5" style="margin-right: 5px; margin-top:50px">
+            <h1><u class="nameFont">Dyllan Hope</u></h1>
+        </div>
+        <div class="col-3">
+        </div>
     </div>
-    <div class="tab">
-        <button class="tablinks" onclick="openInfo(event, 'About')">About</button>
-        <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
-        <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
+    <div class="clearfix">
+        <div class="tab">
+            <button class="tablinks" onclick="openInfo(event, 'About')">About</button>
+            <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
+            <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
+        </div>
+        <div id="About" class="tabcontent">
+            <h3>About me</h3>
+            <p>Here is a little info about me.</p>
+        </div>
+                      
+        <div id="FrontEnd" class="tabcontent">
+            <h3>Front End</h3>
+            <p>Here is my front end stuff.</p> 
+        </div>
+                      
+        <div id="BackEnd" class="tabcontent">
+            <h3>Back End</h3>
+            <p>Here is my back end stuff.</p>
+        </div>
+        <script src="openInfo.js" charset="utf-8"></script>
     </div>
-    <div id="About" class="tabcontent">
-        <h3>About me</h3>
-        <p>Here is a little info about me.</p>
-    </div>
-          
-    <div id="FrontEnd" class="tabcontent">
-        <h3>Front End</h3>
-        <p>Here is my front end stuff.</p> 
-    </div>
-          
-    <div id="BackEnd" class="tabcontent">
-        <h3>Back End</h3>
-        <p>Here is my back end stuff.</p>
-    </div>
-    <script src="openInfo.js" charset="utf-8"></script>
+    
 </body>
 </html>

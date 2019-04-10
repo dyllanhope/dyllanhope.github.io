@@ -80,7 +80,7 @@ body{
     </div>
     <div class="clearfix">
         <div class="tab">
-            <button class="tablinks" onclick="openInfo(event, 'About')">About</button>
+            <button class="tablinks" onclick="openInfo(event, 'About')" id="defaultOpen">About</button>
             <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
             <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
         </div>
@@ -131,6 +131,9 @@ body{
             <hr>
         </div>
         <script src="openInfo.js" charset="utf-8"></script>
+        <script>
+            document.getElementById("defaultOpen").click();
+        </script>
     </div>
     
 </body>

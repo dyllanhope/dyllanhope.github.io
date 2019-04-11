@@ -8,7 +8,11 @@
     <title>Dyllan Hope</title>
 <style>
 h3{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+p{
+    margin: 0px;
 }
 h4{
     margin-top: 5px;
@@ -26,6 +30,35 @@ img{
 }
 body{
     background-color: dimgrey;
+}
+@media(min-width:800px){
+    .CVinfo{
+        float:left;
+        display: block;
+        margin: 20px;
+    }
+    .CVi{
+        width: 98%;
+    }
+}
+@media(max-width:799px){
+    .CVi{
+        width: 93.5%;
+    }
+    .CVinfo{
+        margin:5px;
+    }
+}
+.border{
+    border: 1px solid red;
+}
+.CVinfo{
+    float:left;
+    display: block;
+}
+.CVi{
+    float: left;
+    display: block;
 }
 .nameFont{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -65,6 +98,10 @@ body{
   border-top: none;
   background-color: white;
 }
+.rwcol{
+    background-color: grey;
+    text-align: center;
+}
 </style>
 </head>
 <body background="Wallpaper.jpg">
@@ -83,6 +120,7 @@ body{
             <button class="tablinks" onclick="openInfo(event, 'About')" id="defaultOpen">About</button>
             <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
             <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
+            <button class="tablinks" onclick="openInfo(event, 'CV')">Curriculum Vitae</button>
         </div>
         <div id="About" class="tabcontent">
             <h3><u>About me</u></h3>
@@ -100,9 +138,8 @@ body{
                 <li>Video games</li>
                 <li>Music</li>
             </ul>
-            <h4>Notable links:</h4>
+            <h4>Github link:</h4>
             <a href="https://github.com/dyllanhope">https://github.com/dyllanhope</a> <br>
-            <a href="CV.html">Curriculum Vitae</a>
         </div>
                       
         <div id="FrontEnd" class="tabcontent">
@@ -129,6 +166,56 @@ body{
             </p>
             <a href="https://dyllanhope.github.io/bootcamp-tests/">https://dyllanhope.github.io/bootcamp-tests/</a>
             <hr>
+        </div>
+        <div id="CV" class="tabcontent CVi">
+            <h3><u>Curriculum Vitae</u></h3>
+            <div class="clearfix ">
+                <div class="clearfix rwcol" style="margin-bottom:5px">
+                    <h3>Personal details</h3>
+                </div>
+                <div class="clearfix CVinfo ">
+                    <p>Name: </p>
+                    <p>Cellphone: </p>
+                    <p>Email: </p>
+                    <p>Date of birth:</p>
+                </div>
+                <div class="clearfix CVinfo ">
+                    <p>Dyllan Hope </p>
+                    <p>073 772 9226 </p>
+                    <p>dyllanjhope@gmail.com </p>
+                    <p>1 August 1998</p>
+                </div>
+            </div>
+            <div class="clearfix ">
+                <div class="clearfix rwcol" style="margin-bottom:5px">
+                    <h3>Education</h3>
+                </div>
+                <div class="clearfix CVinfo">
+                    <p>High school: </p>
+                    <p>Home Language: </p>
+                    <p>Other Languages: </p>
+                    <p>High school subjects: </p>
+                </div>
+                <div class="clearfix CVinfo">
+                    <p>Fairmont High School </p>
+                    <p>English </p>
+                    <p>Afrikaans </p>
+                    <p>English, Math, Afrikaans,<br> Information Technology,<br> Geography, Physics and<br> Life Orientation</p>
+                </div>
+            </div>
+            <div class="clearfix ">
+                <div class="clearfix rwcol" style="margin-bottom:5px">
+                    <h3>Experience</h3>
+                </div>
+                <div class="clearfix CVinfo">
+                    <p>Work experience:</p><br><br><br>
+                    <p>Coding experience: </p>
+                </div>
+                <div class="clearfix CVinfo">
+                    <p>Waitering at Rocomamas<br> from December 2017 to<br> March 2019</p>
+                    <p>Delphi, C++(intermediate),<br> Python(intermediate)</p>
+                </div>
+            </div>
         </div>
         <script src="openInfo.js" charset="utf-8"></script>
         <script>

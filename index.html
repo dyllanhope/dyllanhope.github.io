@@ -93,9 +93,20 @@ body{
   border: 1px solid #ccc;
   border-top: none;
   background-color: white;
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
 }
 .rwcol{
     text-align: center;
+}
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 </style>
 </head>
@@ -139,6 +150,16 @@ body{
                       
         <div id="FrontEnd" class="tabcontent">
             <h3><u>Front End</u></h3>
+            <h4>Creating a greetings page</h4>
+            <p>
+                The link below will send you to a page that will expect 2 types of input; one is <br>
+                expecting you to enter a name, the other is a set of radio buttons asking for your <br>
+                language. There will then be an output that displays a greeting message in the language <br>
+                that was chosen. The web page will also keep track of how many peoplehave been greeted <br>
+                as well as what names have been greeted, this info persists through a page refresh. 
+            </p>
+            <a href="https://dyllanhope.github.io/greetings/">https://dyllanhope.github.io/greetings/</a>
+            <hr>
             <h4>Working with DOM</h4>
             <p>
                 This is a basic web page with some basic functions. The point of the task was to <br>

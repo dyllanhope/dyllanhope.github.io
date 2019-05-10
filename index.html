@@ -30,8 +30,7 @@
         img {
             border: 5px solid #ddd;
             border-radius: 8px;
-            width: 250px;
-            margin: 0px;
+            margin: auto;
         }
 
         body {
@@ -66,11 +65,24 @@
                 margin: 20px;
                 width: 25%
             }
+
+            .frontEnd img {
+                border: 5px solid #ddd;
+                border-radius: 8px;
+                margin: 0px;
+            }
         }
 
         @media(max-width:799px) {
             .CVinfo {
                 margin: 5px;
+            }
+            .frontEnd img {
+                border: 5px solid #ddd;
+                border-radius: 8px;
+                margin: 0px;
+                width : 338px;
+                height : 174px;
             }
         }
 
@@ -162,10 +174,10 @@
     </style>
 </head>
 
-<body background="Wallpaper.jpg">
+<body background="media/Wallpaper.jpg">
     <div class="row">
         <div class="col-3" style="margin-left: 5px">
-            <img src="myself.jpg" alt="Picture of myself">
+            <img src="media/myself.jpg" alt="Picture of myself">
         </div>
         <div class="col-5" style="margin-right: 5px; margin-top:50px">
             <h1><u class="nameFont">Dyllan Hope</u></h1>
@@ -200,69 +212,120 @@
             <a href="https://github.com/dyllanhope">https://github.com/dyllanhope</a> <br>
         </div>
 
-        <div id="FrontEnd" class="tabcontent">
+        <div id="FrontEnd" class="tabcontent frontEnd">
             <h3><u>Front End</u></h3>
-            <h4>Creating a matching-dates page</h4>
-            <p>
-                The task was to create an app that has 2 date inputs and a row of blocks, 1 for each <br>
-                weekday. The user enters the first date(eg.01-01-2018) into the first input, the app <br>
-                then highlights which day of the week that date would fall on (eg. Monday) in blue. The <br>
-                same would occur for the second date input, but would just highlight the weekday in red <br>
-                rather. If both date inputs happened to fall on the same weekday, then that weekday is <br>
-                highlighted in green.
-            </p>
-            <a href="https://dyllanhope.github.io/matching-dates/">https://dyllanhope.github.io/matching-dates/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Creating a matching-dates page</h4>
+                    <p>
+                        The task was to create an app that has 2 date inputs and a row of blocks, 1 for each
+                        weekday. The user enters the first date(eg.01-01-2018) into the first input, the app
+                        then highlights which day of the week that date would fall on (eg. Monday) in blue. The
+                        same would occur for the second date input, but would just highlight the weekday in red
+                        rather. If both date inputs happened to fall on the same weekday, then that weekday is
+                        highlighted in green. <br>
+                        link:
+                    </p>
+                    <a
+                        href="https://dyllanhope.github.io/matching-dates/">https://dyllanhope.github.io/matching-dates/</a>
+                </div>
+                <div class="col-6">
+                    <img src="media/matching-days.jpg" alt="matching-days task picture">
+                </div>
+            </div>
             <hr>
-            <h4>
-                Creating a Registration page</h4>
-            <p>
-                This is a web page that takes in a users registration an keeps the data in a list <br>
-                that is then displayed on screen in a similar design to a number plate. The user is <br>
-                then able to filter the saved registrations according to towns. The web page then <br>
-                loads in the registrations from the selected towns. The registrations also remain <br>
-                through a page refresh. The page is also split into 2 halves; the left half was built <br>
-                using regular JavaScript, HTML and CSS and the right half was built using handlebars <br>
-                templates.
-            </p>
-            <a href="https://dyllanhope.github.io/Registration/">https://dyllanhope.github.io/Registration/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>
+                        Creating a Registration page</h4>
+                    <p>
+                        This is a web page that takes in a users registration an keeps the data in a list
+                        that is then displayed on screen in a similar design to a number plate. The user is
+                        then able to filter the saved registrations according to towns. The web page then
+                        loads in the registrations from the selected towns. The registrations also remain
+                        through a page refresh. The page is also split into 2 halves; the left half was built
+                        using regular JavaScript, HTML and CSS and the right half was built using handlebars
+                        templates. <br>
+                        link:
+                    </p>
+                    <a href="https://dyllanhope.github.io/Registration/">https://dyllanhope.github.io/Registration/</a>
+                </div>
+                <div class="col-6">
+                    <img src="media/registration.jpg" alt="registration task picture">
+                </div>
+            </div>
             <hr>
-            <h4>Creating a greetings page</h4>
-            <p>
-                The link below will send you to a page that will expect 2 types of input; one is <br>
-                expecting you to enter a name, the other is a set of radio buttons asking for your <br>
-                language. There will then be an output that displays a greeting message in the language <br>
-                that was chosen. The web page will also keep track of how many people have been greeted <br>
-                as well as what names have been greeted, this info persists through a page refresh.
-            </p>
-            <a href="https://dyllanhope.github.io/greetings/">https://dyllanhope.github.io/greetings/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Creating a greetings page</h4>
+                    <p>
+                        The link below will send you to a page that will expect 2 types of input; one is
+                        expecting you to enter a name, the other is a set of radio buttons asking for your
+                        language. There will then be an output that displays a greeting message in the language
+                        that was chosen. The web page will also keep track of how many people have been greeted
+                        as well as what names have been greeted, this info persists through a page refresh. <br>
+                        link:
+                    </p>
+                    <a href="https://dyllanhope.github.io/greetings/">https://dyllanhope.github.io/greetings/</a>
+                </div>
+                <div class="col-6">
+                    <img src="media/greetings.jpg" alt="Greetings task picture">
+                </div>
+            </div>
             <hr>
-            <h4>Working with DOM</h4>
-            <p>
-                This is a basic web page with some basic functions. The point of the task was to <br>
-                complete 4 widgets that all essentially completed the same task just in different <br>
-                ways. The task tested knowledge of using DOM; referencing, adding events to buttons <br>
-                as well as changing CSS using JS. The text-bill widget and radio-bill widget were <br>
-                built using handlbars templates.
-            </p>
-            <a href="https://dyllanhope.github.io/dom-intro/">https://dyllanhope.github.io/dom-intro/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Working with DOM</h4>
+                    <p>
+                        This is a basic web page with some basic functions. The point of the task was to
+                        complete 4 widgets that all essentially completed the same task just in different
+                        ways. The task tested knowledge of using DOM; referencing, adding events to buttons
+                        as well as changing CSS using JS. The text-bill widget and radio-bill widget were
+                        built using handlbars templates. <br>
+                        link:
+                    </p>
+                    <a href="https://dyllanhope.github.io/dom-intro/">https://dyllanhope.github.io/dom-intro/</a>
+                </div>
+                <div class="col-6">
+                    <img src="media/dom-intro.jpg" alt="dom-intro task picture">
+                </div>
+            </div>
             <hr>
-            <h4>Unit testing in a browser:</h4>
-            <p>
-                This is a simple unit testing example, where I went through and created <br>
-                asserts to test the functions we made in the CodeX bootcamp, then get it to<br>
-                display in a browser using Mocha and ChaiJS asserts.
-            </p>
-            <a href="https://dyllanhope.github.io/bootcamp-tests/">https://dyllanhope.github.io/bootcamp-tests/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Unit testing in a browser:</h4>
+                    <p>
+                        This is a simple unit testing example, where I went through and created
+                        asserts to test the functions we made in the CodeX bootcamp, then get it to
+                        display in a browser using Mocha and ChaiJS asserts. <br>
+                        link:
+                    </p>
+                    <a
+                        href="https://dyllanhope.github.io/bootcamp-tests/">https://dyllanhope.github.io/bootcamp-tests/</a>
+                </div>
+                <div class="col-6">
+                    <img src="media/unit-testing.jpg" alt="unit-testing task picture">
+                </div>
+            </div>
             <hr>
-            <h4>Web pages(with & without framework)</h4>
-            <p>
-                The link below will take you to a landing page with links to 2 webpages.<br>
-                The first, "My webpage", is a web page made using only HTML and CSS and<br>
-                no framework. The second, "My webpage grid", was made using a framework<br>
-                called Simple Grid. Both pages are the same, just different methods used<br>
-                to make them.
-            </p>
-            <a href="https://dyllanhope.github.io/basic-webpage/">https://dyllanhope.github.io/basic-webpage/</a>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Web pages(with & without framework)</h4>
+                    <p>
+                        The link below will take you to a landing page with links to 2 webpages.
+                        The first, "My webpage", is a web page made using only HTML and CSS and
+                        no framework. The second, "My webpage grid", was made using a framework
+                        called Simple Grid. Both pages are the same, just different methods used
+                        to make them. <br>
+                        link:
+                    </p>
+                    <a
+                        href="https://dyllanhope.github.io/basic-webpage/">https://dyllanhope.github.io/basic-webpage/</a>
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
         </div>
 
         <div id="BackEnd" class="tabcontent">

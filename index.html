@@ -1,118 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="simple-grid.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dyllan Hope</title>
-<style>
-h3{
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-p{
-    margin: 0px;
-}
-h4{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-ul{
-    padding-left: 20px;
-    margin: 0px;
-}
-img{
-    border: 5px solid #ddd;
-    border-radius: 8px;
-    width: 250px;
-    margin: 0px;
-}
-body{
-    background-color: dimgrey;
-}
-a:hover{
-    color: rgb(105, 158, 27);
-}
-@media(min-width:800px){
-    .CVinfo{
-        float:left;
-        display: block;
-        margin: 20px;
-        width: 25%
-    }
-}
-@media(max-width:799px){
-    .CVinfo{
-        margin:5px;
-    }
-}
-.border{
-    border: 1px solid red;
-}
-.CVinfo{
-    float:left;
-    display: block;
-}
-.CVi{
-    float: left;
-    display: block;
-    width:98%
-}
-.nameFont{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-size: 70px;
-}
-.clearfix{
-    overflow: auto;
-    zoom:1;
-}
-.tab {
-  border: 1px solid #ccc;
-  overflow:hidden;
-  background-color: #f1f1f1;
-}
-.tab button {
-    background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-.tab button:hover {
-  background-color: rgb(187, 187, 187);
-}
-.tab button.active {
-  background-color:darkgreen;
-  color: white;
-}
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  background-color: white;
-  -webkit-animation: fadeEffect 0.5s;
-  animation: fadeEffect 0.5s;
-}
-.rwcol{
-    text-align: center;
-}
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+    <style>
+        h3 {
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
 
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-</style>
+        p {
+            margin: 0px;
+        }
+
+        h4 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0px;
+        }
+
+        img {
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: dimgrey;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(105, 158, 27);
+            text-decoration: underline;
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
+        @media(min-width:800px) {
+            .CVinfo {
+                float: left;
+                display: block;
+                margin: 20px;
+                width: 25%
+            }
+        }
+
+        @media(max-width:799px) {
+            .CVinfo {
+                margin: 5px;
+            }
+        }
+
+        .border {
+            border: 1px solid red;
+        }
+
+        .CVinfo {
+            float: left;
+            display: block;
+        }
+
+        .CVi {
+            float: left;
+            display: block;
+            width: 98%
+        }
+
+        .nameFont {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            font-size: 70px;
+        }
+
+        .clearfix {
+            overflow: auto;
+            zoom: 1;
+        }
+
+        .tab {
+            border: 1px solid #ccc;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        .tab button:hover {
+            background-color: rgb(187, 187, 187);
+        }
+
+        .tab button.active {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: white;
+            -webkit-animation: fadeEffect 0.5s;
+            animation: fadeEffect 0.5s;
+        }
+
+        .rwcol {
+            text-align: center;
+        }
+
+        @-webkit-keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
 <body background="Wallpaper.jpg">
     <div class="row">
         <div class="col-3" style="margin-left: 5px">
@@ -150,7 +195,7 @@ a:hover{
             <h4>Github link:</h4>
             <a href="https://github.com/dyllanhope">https://github.com/dyllanhope</a> <br>
         </div>
-                      
+
         <div id="FrontEnd" class="tabcontent">
             <h3><u>Front End</u></h3>
             <h4>Creating a matching-dates page</h4>
@@ -183,7 +228,7 @@ a:hover{
                 expecting you to enter a name, the other is a set of radio buttons asking for your <br>
                 language. There will then be an output that displays a greeting message in the language <br>
                 that was chosen. The web page will also keep track of how many people have been greeted <br>
-                as well as what names have been greeted, this info persists through a page refresh. 
+                as well as what names have been greeted, this info persists through a page refresh.
             </p>
             <a href="https://dyllanhope.github.io/greetings/">https://dyllanhope.github.io/greetings/</a>
             <hr>
@@ -215,7 +260,7 @@ a:hover{
             </p>
             <a href="https://dyllanhope.github.io/basic-webpage/">https://dyllanhope.github.io/basic-webpage/</a>
         </div>
-                      
+
         <div id="BackEnd" class="tabcontent">
             <h3><u>Back End</u></h3>
             <h4>Nothing yet...</h4>
@@ -256,7 +301,8 @@ a:hover{
                     <p>Fairmont High School </p>
                     <p>English </p>
                     <p>Afrikaans </p>
-                    <p>English, Math, Afrikaans,<br> Information Technology,<br> Geography, Physics and<br> Life Orientation</p>
+                    <p>English, Math, Afrikaans,<br> Information Technology,<br> Geography, Physics and<br> Life
+                        Orientation</p>
                 </div>
             </div>
             <div class="clearfix">
@@ -279,6 +325,7 @@ a:hover{
             document.getElementById("defaultOpen").click();
         </script>
     </div>
-    
+
 </body>
+
 </html>

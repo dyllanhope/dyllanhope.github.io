@@ -58,7 +58,7 @@ a:active {
         
     }
 }
-@media(min-width:800px) {
+@media(min-width:751px) {
     .CVinfo {
         float: left;
         display: block;
@@ -67,7 +67,7 @@ a:active {
     }
 }
 
-@media(max-width:799px) {
+@media(max-width:750px) {
     .CVinfo {
         margin: 5px;
     }
@@ -96,6 +96,9 @@ a:active {
 .CVinfo {
     float: left;
     display: block;
+}
+.CVinfo p{
+    font-size: 14px;
 }
 
 .CVi {

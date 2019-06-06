@@ -6,11 +6,14 @@ table{
     width: 100%;
 }
 th{
-    border: 1px solid black;
+    border: 1px solid #ccc;
     background-color: darkgreen;
     color: white;
 }
-
+td{
+    border: 1px solid #ccc;
+    border-collapse: collapse!important;
+}
 p {
     margin: 0px;
 }

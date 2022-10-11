@@ -1,468 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/simple-grid.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dyllan Hope</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dyllan Hope</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="./css/main.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body background="media/Wallpaper.jpg">
-    <div class="row">
-        <div class="col-6" style="margin-left: 5px">
-            <img src="media/myself.jpg" alt="Picture of myself">
+<body>
+  <header class="header__nav" id="header">
+    <nav class="nav container__nav">
+      <a href="#" class="nav__logo">Dyllan</a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid__nav">
+          <li class="nav__item">
+            <a href="#Home" class="nav__link">
+              <i class="uil uil-estate nav__icon"></i> Home
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#About" class="nav__link">
+              <i class="uil uil-info-circle nav__icon"></i> About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#Portfolio" class="nav__link">
+              <i class="uil uil-book-open nav__icon"></i> Portfolio
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#Contact" class="nav__link">
+              <i class="uil uil-envelope nav__icon"></i> Contact
+            </a>
+          </li>
+        </ul>
+        <i class="uil uil-times nav__close" id="nav-close"></i>
+      </div>
+      <div class="nav__btns">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="uil uil-apps"></i>
         </div>
-        <div class="col-6" style="margin-right: 5px; margin-top:5%;">
-            <h1><u class="nameFont">Dyllan Hope</u></h1>
-        </div>
-    </div>
-    <div class="clearfix">
-        <div class="tab">
-            <button class="tablinks" onclick="openInfo(event, 'About')" id="defaultOpen">About</button>
-            <button class="tablinks" onclick="openInfo(event, 'FrontEnd')">Front End</button>
-            <button class="tablinks" onclick="openInfo(event, 'BackEnd')">Back End</button>
-            <button class="tablinks" onclick="openInfo(event, 'CV')">Curriculum Vitae</button>
-        </div>
-        <div id="About" class="tabcontent">
-            <h3><u>About me</u></h3>
-            <p>
-                Currently I'm studying web developement at <span style="color:green">CodeX</span>. I have had a history
-                <br>
-                in coding, it's something I've done since grade 10 in high school. I also <br>
-                studied a BSc Comp Sci degree at Unisa but stopped after a year, this is<br>
-                where I learnt some C++ and Python. I also really enjoy working in a team <br>
-                whether it be leading it or being a team member.
-            </p>
-            <h4>A few interests of mine:</h4>
-            <ul>
-                <li>Hockey</li>
-                <li>Programming</li>
-                <li>Video games</li>
-                <li>Music</li>
-            </ul>
-            <h4>Github link:</h4>
-            <a href="https://github.com/dyllanhope">https://github.com/dyllanhope</a> <br>
-        </div>
-
-        <div id="FrontEnd" class="tabcontent frontEnd">
-            <h3><u>Front End</u></h3>
-            <div class="row">
-                <h4>Recipe book using API</h4>
-                <div class="col-7">
-                    <p>
-                        This widget was built to be a recipe book online. It uses a public API called the MealDB
-                        as a source to pull data from. The user searches for recipes based off of 3 choices; 
-                        categories, recipe or by random. Random makes the widget choose a recipe for you. The recipe
-                        option allows a user to search for a recipe using keywords. The category choice allows the 
-                        user to browse through all the options the book has to offer by category(dessert, chicken etc.).
-                        Once the recipe is selected the user can then view thee full recipe with ingredients and a 
-                        picture, there is also a youtube link to a tutorial on how to make each food item. 
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/recipe-book.jpg" alt="recipe-book app picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllanhope.github.io/Recipe-book/">https://dyllanhope.github.io/Recipe-book/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Creating a Shoe-catalogue Application</h4>
-                <div class="col-7">
-                    <p>
-                        This task's objective was create a shoe-catalogue. The catalogue would have to be able
-                        to take in input (users preference of shoe; colour,brand and size) using drop downs. The
-                        program would then search its records for the item and report whether we have it,
-                        how much of that particular shoe we have along with its price. The user will then be able
-                        to add the shoe to their "shopping basket", which keeps track of whatever they are
-                        interested in buying. Every item they add to the basket, removes stock from the records,
-                        and they can choose to purchase the items, in which case the records stock will remain
-                        depleted or they could cancel their order and the stock returns. There is also support
-                        to add new records from the application.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/Shoe-catalogoue.jpg" alt="Shoe-catalogue task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllanhope.github.io/Shoe-catalogue/">https://dyllanhope.github.io/Shoe-catalogue/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Creating a matching-dates page</h4>
-                <div class="col-7">
-                    <p>
-                        The task was to create an app that has 2 date inputs and a row of blocks, 1 for each
-                        weekday. The user enters the first date(eg. 01-01-2018) into the first input, the app
-                        then highlights which day of the week that date would fall on (eg. Monday) in blue. The
-                        same would occur for the second date input, but would highlight the weekday in red
-                        rather. If both date inputs happened to fall on the same weekday, then that weekday is
-                        highlighted in green. All changes to colours and elements is done using handlebars templates.
-
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/matching-days.jpg" alt="matching-days task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllanhope.github.io/matching-dates/">https://dyllanhope.github.io/matching-dates/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Creating a Registration page</h4>
-                <div class="col-7">
-                    <p>
-                        This is a web page that takes in a users registration an keeps the data in a list
-                        that is then displayed on screen in a similar design to a number plate. The user is
-                        then able to filter the saved registrations according to towns. The web page then
-                        loads in the registrations from the selected towns. The registrations also remain
-                        through a page refresh. The page is also split into 2 halves; the left half was built
-                        using regular JavaScript, HTML and CSS and the right half was built using handlebars
-                        templates. <br>
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/registration.jpg" alt="registration task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://dyllanhope.github.io/Registration/">https://dyllanhope.github.io/Registration/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Creating a greetings page</h4>
-                <div class="col-7">
-                    <br>
-                    <p>
-                        The link below will send you to a page that will expect 2 types of input; one is
-                        expecting you to enter a name, the other is a set of radio buttons asking for your
-                        language. There will then be an output that displays a greeting message in the language
-                        that was chosen. The web page will also keep track of how many people have been greeted
-                        as well as what names have been greeted, this info persists through a page refresh. <br>
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/greetings.jpg" alt="Greetings task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://dyllanhope.github.io/greetings/">https://dyllanhope.github.io/greetings/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Working with DOM</h4>
-                <div class="col-7">
-                    <br>
-                    <p>
-                        This is a basic web page with some basic functions. The point of the task was to
-                        complete 4 widgets that all essentially completed the same task just in different
-                        ways. The task tested knowledge of using DOM; referencing, adding events to buttons
-                        as well as changing CSS using JS. The text-bill widget and radio-bill widget were
-                        built using handlbars templates. <br>
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/dom-intro.jpg" alt="dom-intro task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://dyllanhope.github.io/dom-intro/">https://dyllanhope.github.io/dom-intro/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Unit testing in a browser:</h4>
-                <div class="col-7">
-                    <br>
-                    <p>
-                        This is a simple unit testing example, where I went through and created
-                        asserts to test the functions we made in the CodeX bootcamp, then get it to
-                        display in a browser using Mocha and ChaiJS asserts. <br>
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/unit-testing.jpg" alt="unit-testing task picture">
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllanhope.github.io/bootcamp-tests/">https://dyllanhope.github.io/bootcamp-tests/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Web pages(with & without framework)</h4>
-                <div class="col-12">
-                    <br>
-                    <p>
-                        The link below will take you to a landing page with links to 2 webpages. <br>
-                        The first, "My webpage", is a web page made using only HTML and CSS and <br>
-                        no framework. The second, "My webpage grid", was made using a framework <br>
-                        called Simple Grid. Both pages are the same, just different methods used <br>
-                        to make them. <br>
-                    </p>
-                </div>
-                <div style="float:right">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllanhope.github.io/basic-webpage/">https://dyllanhope.github.io/basic-webpage/</a>
-                </div>
-            </div>
-        </div>
-        <div id="BackEnd" class="tabcontent frontEnd">
-            <h3><u>Back End</u></h3>
-            <div class="row">
-                <h4>Hangman Game VueJS</h4>
-                <div class="col-7">
-                    <p>
-                        This is an app built around the simple game of hangman. It allows users to make 
-                        their own accounts. They can play games of hangman and build up points by winning 
-                        and climbing the leaderboards. Users also have the ability to expand the word 
-                        repository. The words they submit is sent to the admin page where the words have 
-                        to be verified by the admin. If the word is verified then the users will get 
-                        points. Users can also view their own game history and stats on their profile 
-                        page. The application uses tokens for authentication.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/hangman.jpg" alt="Hangman game picture">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://hangman-webapp.herokuapp.com/">https://hangman-webapp.herokuapp.com/</a>
-                </div>
-            </div>
-            <div class="row">
-                <h4>Shoe catalogue web-app (APIs)</h4>
-                <div class="col-7">
-                    <p>
-                        The task was to adapt the and use the shoe-catalogue that I made in front end to 
-                        use APIs. The shoe catalogue is run as a client and is linked via APIs to edit 
-                        and return info from the database that then retains and persists the data. The 
-                        works exactly like it does in the front end, however, it just uses APIs.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/shoe-catalogue-api.jpg" alt="shoe catalogue web-app">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://dyllans-shoes.herokuapp.com/">https://dyllans-shoes.herokuapp.com/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Waiter Manager web-app</h4>
-                <div class="col-7">
-                    <p>
-                        The point of the application is to allow waiters to remotely select their shifts 
-                        from anywhere and at anytime. The manager, who has admin access, is then able to 
-                        view the shifts, whose working on what days, who hasn't chosen any shifts yet and 
-                        has the ability to edit shifts of the waiters. 
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/waiter-app.jpg" alt="Waiter manager web-app">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://waiter-manager.herokuapp.com/">https://waiter-manager.herokuapp.com/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Registration numbers with PostgresSQL</h4>
-                <div class="col-7">
-                    <p>
-                        This project is very similar in functionality to the front end program I built.
-                        The point of the program is to take in registration numbers and display them,
-                        the program needs to test and filter whether or not the input is valid. The user
-                        can then filter the number plates by town, they select the town and click 'filter'.
-                        The difference between this app and the one I made in front end is that this one
-                        uses linked tables in a relational database.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/registration-webapp.jpg" alt="Registration web-app">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://registration-numbers.herokuapp.com/">https://registration-numbers.herokuapp.com/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Greetings page with postgresSQL</h4>
-                <div class="col-7">
-                    <p>
-                        This task was to create a Greetings WebApp, similar to the one made in the front
-                        end. The difference between this application and the one I made in front end is
-                        this has a little more functionality and it runs using expressJS and NodeJS.
-                        The extra features on this application is the link that takes the user to a page
-                        of all the names greeted. The user can then select each name to see how many times
-                        that name was greeted.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/greetings-webapp.jpg" alt="Greetings page web-app">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://nametrack.herokuapp.com/">https://nametrack.herokuapp.com/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Settings Bill with ExpressJS</h4>
-                <div class="col-7">
-                    <p>
-                        The task was to create a bill with settings, similarly to what I've previously
-                        made in dom-intro front-end application. The user can update the costs and of
-                        calls and sms's as well as the warning and critical levels. They are then able
-                        to add as many calls and sms's as they can provided the total cost remains below
-                        the critical level they set.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/settings-bill-expressjs.jpg" alt="Settings Bill using ExpressJS screenshot">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://settings-bill.herokuapp.com/">https://settings-bill.herokuapp.com/</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Unit testing bootcamp functions using NodeJS</h4>
-                <div class="col-7">
-                    <p>
-                        The task was to create unit tests for all the bootcamp functions and test
-                        them in the terminal. The tests and function were all separated so the
-                        functions are all used as external modules to be tested using the .require()
-                        function. The tests are done using mocha and NodeJS asserts.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/bootcamp-terminal-tests.jpg" alt="bootcamp-terminal-tests">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a
-                        href="https://github.com/dyllanhope/bootcamp-terminal-tests">https://github.com/dyllanhope/bootcamp-terminal-tests</a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <h4>Running JS in terminal</h4>
-                <div class="col-7">
-                    <p>
-                        This task was to create a function that could be run in the terminal. I used
-                        NodeJS to do this. The function was previously used as an in-browser function
-                        but then was converted into an external module that was then called in another
-                        function to be used. The purpose of the function is to greet someone ("Dyllan")
-                        in the terminal.
-                    </p>
-                </div>
-                <div class="col-5 center">
-                    <img src="media/greet.jpg" alt="greet function">
-                </div>
-                <div style="float:left">
-                    <span style="font-weight: bold"><u>link:</u></span>
-                    <a href="https://github.com/dyllanhope/greet">https://github.com/dyllanhope/greet</a>
-                </div>
-            </div>
-        </div>
-        <div id="CV" class="tabcontent CVi">
-            <h3><u>Curriculum Vitae</u></h3>
+      </div>
+    </nav>
+  </header>
+  <main class="main container-fluid">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="Home">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 order-1 d-flex justify-content-center justify-content-sm-end"
+            style="display:flex;align-items:center">
             <div>
-                <table>
-                    <tr>
-                        <th class="center" colspan="2">Personal Details:</th>
-                    </tr>
-                    <tr>
-                        <td>Name:</td>
-                        <td>Dyllan Hope</td>
-                    </tr>
-                    <tr>
-                        <td>Cellphone:</td>
-                        <td>073 772 9226</td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td>dyllanjhope@gmail.com</td>
-                    </tr>
-                    <tr>
-
-                        <td>Date of birth:</td>
-                        <td>1 August 1998</td>
-                    </tr>
-                    <tr>
-                        <th class="center" colspan="2">Education:</th>
-                    </tr>
-                    <tr>
-                        <td>High school:</td>
-                        <td>Fairmont High School</td>
-                    </tr>
-                    <tr>
-                        <td>Home Language:</td>
-                        <td>English</td>
-
-                    </tr>
-                    <tr>
-                        <td>Other Languages:</td>
-                        <td>Afrikaans</td>
-
-                    </tr>
-                    <tr>
-                        <td>High school subjects:</td>
-                        <td>English, Math, Afrikaans, Information Technology, Geography, Physics and Life
-                            Orientation</td>
-                    </tr>
-                    <tr>
-                        <th class="center" colspan="2">Experience:</th>
-                    </tr>
-                    <tr>
-                        <td>Work Experience:</td>
-                        <td>Waitering at Rocomamas from December 2017 to March 2019</td>
-                    </tr>
-                    <tr>
-                        <td>Coding experience:</td>
-                        <td>Delphi (High School), JavaScript, HTML, CSS, NodeJS, ExpressJS and PostgresSQL</td>
-                    </tr>
-                    <tr>
-                        <th class="center" colspan="2">References:</th>
-                    </tr>
-                    <tr>
-                        <td>Rocomamas Waitering:</td>
-                        <td>Shane Bekker - 079 884 8659</td>
-                    </tr>
-                </table>
+              <h1 class="home__title">Hi, I'm Dyllan!</h1>
+              <h3 class="home__subtitle">&lt/ Fullstack Developer &gt</h3>
+              <div class="col-12 text-center text-sm-start">
+                <a href="https://www.linkedin.com/in/dyllanhope">
+                  <i class="uil uil-linkedin"></i>
+                </a>
+                <a href="https://github.com/dyllanhope">
+                  <i class="uil uil-github"></i>
+                </a>
+                <a href="mailto:dyllanjhope@gmail.com">
+                  <i class="uil uil-envelope"></i>
+                </a>
+              </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-6 order-md-1">
+            <img class="home__thumbnail mx-auto d-block" src="media/my-thumbnail.png" alt="Thumbnail of myself">
+          </div>
         </div>
-        <script src="js/openInfo.js" charset="utf-8"></script>
-        <script>
-            document.getElementById("defaultOpen").click();
-        </script>
-    </div>
+      </div>
+    </section>
 
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="About">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="text-center">
+              <h1 class="home__title">About Me</h1>
+              <p>Currently working at Capitec Bank as a Full Stack Developer. <br><br>
+
+                I Have a long running passion and interest in tech and programming as a whole. From figuring out how
+                things work by building full end-to-end applications to gaming.
+
+                I Thoroughly enjoy the flexibility and freedom to explore in Front End as well as the massive logical
+                puzzle that is Back End programming.</p><br><br>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <div class="skills-bar">
+                <h3 class="d-flex justify-content-center">My Skills</h3>
+                <div class="bar">
+                  <div class="info">
+                    <span>Javascript (NodeJS, Typescript, JQuery)</span>
+                  </div>
+                  <div class="progress-line javascript"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>C# (ASP.NET, .NET Core)</span>
+                  </div>
+                  <div class="progress-line csharp"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>HTML & CSS</span>
+                  </div>
+                  <div class="progress-line html"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>React & Razor</span>
+                  </div>
+                  <div class="progress-line react"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>SQL (MSSQL, PostGreSQL, MongoDB)</span>
+                  </div>
+                  <div class="progress-line sql"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>Architecture Patterns (MVC, MVVM, CLEAN)</span>
+                  </div>
+                  <div class="progress-line architecture"><span></span></div>
+                </div>
+
+                <div class="bar">
+                  <div class="info">
+                    <span>Agile</span>
+                  </div>
+                  <div class="progress-line agile"><span></span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== PORTFOLIO ====================-->
+    <section class="portfolio section" id="Portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="home__title text-center">Portfolio</h1><br>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card carousel__shadow">
+                  <img src="media/Audago.PNG" class="card-img-top" alt="...">
+                  <div class="card-body card__border d-none d-md-block">
+                    <h5 class="card-title">Audago</h5>
+                    <p class="card-text">A full stack application using the MERN stack and GraphQL that simulates a
+                      music streaming
+                      service using Apple Music's sample music API.</p>
+                    <a class="audago float-end" href="https://github.com/Ghost-Zen/Audago"><i
+                        class="bi bi-github"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card carousel__shadow">
+                  <img src="media/Imdb.PNG" class="card-img-top" alt="...">
+                  <div class="card-body card__border d-none d-md-block">
+                    <h5 class="card-title">IMDB Movie Searcher</h5>
+                    <p class="card-text">A full stack application using React, Bootstrap, Easy-Peasy (state management)
+                      and default
+                      JavaScript API functionality to build an IMDB movie lookup website.</p>
+                    <a class="float-end" href="https://github.com/dyllanhope/IMDB-movie-searcher"><i
+                        class="bi bi-github"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card carousel__shadow">
+                  <img src="media/Stats.PNG" class="card-img-top" alt="...">
+                  <div class="card-body card__border d-none d-md-block">
+                    <h5 class="card-title">Advert Statistics</h5>
+                    <p class="card-text">A full stack application using React, MaterialUI and NestJS micro services to
+                      manage statistics.
+                      All endpoints were documented with Open API.</p>
+                    <a class="float-end" href="https://github.com/dyllanhope/Advert-Statistics-Dyllan-hope"><i
+                        class="bi bi-github"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card carousel__shadow">
+                  <img src="media/hangman.PNG" class="card-img-top" alt="...">
+                  <div class="card-body card__border d-none d-md-block">
+                    <h5 class="card-title">Hangman</h5>
+                    <p class="card-text">A full stack application using VueJS, NodeJS, PostgresSQL and web sockets to
+                      play games of
+                      hangman in real time against other opponents.</p>
+                    <a class="float-end" href="https://github.com/dyllanhope/Hangman-App-VueJS"><i
+                        class="bi bi-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== DOWNLOAD CV ====================-->
+    <section class="Download section" id="Download">
+      <div class="d-flex justify-content-center">
+        <a href="media/Dyllan_Hope_Resume.pdf" target="_blank" download="Dyllan_Hope_Resume.pdf"><button class="btn btn-primary"
+            type="button">Download my
+            CV!</button></a>
+      </div>
+    </section>
+
+    <!--==================== CONTACT ====================-->
+    <section class="contact section" id="Contact">
+      <!-- Footer -->
+      <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <div class="row border-top">
+          <div class="col-12 text-center">
+            <span>Contact me on my socials:</span>
+          </div>
+          <div class="col-12 text-center">
+            <a href="https://www.linkedin.com/in/dyllanhope">
+              <i class="uil uil-linkedin"></i>
+            </a>
+            <a href="https://github.com/dyllanhope">
+              <i class="uil uil-github"></i>
+            </a>
+            <a href="mailto:dyllanjhope@gmail.com">
+              <i class="uil uil-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Section: Social media -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+          Built by Dyllan Hope.
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </section>
+  </main>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

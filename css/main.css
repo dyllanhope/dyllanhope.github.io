@@ -1,190 +1,526 @@
-h3 {
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-table{
-    width: 100%;
-}
-th{
-    border: 1px solid #ccc;
-    background-color: darkgreen;
-    color: white;
-}
-td{
-    border: 1px solid #ccc;
-    border-collapse: collapse!important;
-}
-p {
-    margin: 0px;
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@400;500;600&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 142;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: #182748;
+    --text-color: #182748;
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: #F9FAFC;
+    --container-color: #F9FAFC;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Hind Vadodara', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
 }
 
-h4 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
 }
 
-ul {
-    padding-left: 20px;
-    margin: 0px;
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-img {
-    border: 5px solid #ddd;
-    border-radius: 8px;
-    margin: auto;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: dimgrey;
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
 }
 
 a {
-    color: rgb(0, 87, 0);
-}
-
-a:link {
     text-decoration: none;
 }
 
-a:visited {
-    text-decoration: none;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-a:hover {
-    color: rgb(105, 158, 27);
-    text-decoration: underline;
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+    padding: 2rem 0 4rem;
 }
 
-a:active {
-    text-decoration: underline;
+.section__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
 }
 
-@media(min-width:1024px){
-    .frontEnd img {
-        border: 5px solid #ddd;
-        border-radius: 8px;
-        margin: 0px;
-        width:433px;
-        height:223px;
-        
-    }
-}
-@media(min-width:751px) {
-    .CVinfo {
-        float: left;
-        display: block;
-        margin: 20px;
-        width: 25%
-    }
-}
-
-@media(max-width:750px) {
-    .CVinfo {
-        margin: 5px;
-    }
-    .frontEnd img {
-        border: 5px solid #ddd;
-        border-radius: 8px;
-        margin: 0px;
-        width : 338px;
-        height : 174px;
-    }
-}
-@media(max-width:375px){
-    .frontEnd img {
-        border: 5px solid #ddd;
-        border-radius: 8px;
-        margin: auto;
-        width : 252px;
-        height : 130px;
-    }
-}
-
-.border {
-    border: 1px solid red;
-}
-
-.CVinfo {
-    float: left;
+.section__subtitle {
     display: block;
-}
-.CVinfo p{
-    font-size: 14px;
-}
-
-.CVi {
-    float: left;
-    display: block;
-    width: 98%
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
 }
 
-.nameFont {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-size: 70px;
-}
-
-.clearfix {
-    overflow: auto;
-    zoom: 1;
-}
-
-.tab {
-    border: 1px solid #ccc;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-.tab button:hover {
-    background-color: rgb(187, 187, 187);
-}
-
-.tab button.active {
-    background-color: darkgreen;
-    color: white;
-}
-
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-    background-color: white;
-    -webkit-animation: fadeEffect 0.5s;
-    animation: fadeEffect 0.5s;
-}
-
-.rwcol {
+.section__title,
+.section__subtitle {
     text-align: center;
 }
 
-@-webkit-keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
+/*==================== LAYOUT ====================*/
+.container__nav {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
 
-    to {
+.grid__nav {
+    display: grid;
+    gap: 1.5rem;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.header__nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+/*==================== NAV ====================*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+    color: var(--first-color);
+}
+
+.nav__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover {
+    color: var(--first-color);
+}
+
+@media screen and (max-width:767px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+
+.nav__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__icon {
+    font-size: 1.2rem;
+}
+
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+
+.nav__close:hover {
+    color: var(--first-color-alt);
+}
+
+/* show menu */
+.show-menu {
+    bottom: 0;
+}
+
+/* Active link */
+
+
+/* Change background header */
+
+
+/*==================== HOME ====================*/
+
+.container__colour {
+    background-color: var(--container-color);
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #42c3a7;
+    border-radius: 5px;
+}
+
+.home__thumbnail {
+    margin-bottom: 20px;
+    background-color: #57e089;
+    border-radius: 100%;
+}
+.home__title {
+    font-size: var(--big-font-size);
+}
+
+.home__subtitle {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+
+/*==================== BUTTONS ====================*/
+
+
+/*==================== ABOUT ====================*/
+
+
+/*==================== SKILLS ====================*/
+.skills-bar{
+    width: 600px;
+    background:var(--body-color);
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.skills-bar .bar{
+    margin: 20px 0px;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100%{
         opacity: 1;
     }
 }
 
-@keyframes fadeEffect {
-    from {
-        opacity: 0;
-    }
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                        0px 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
 
-    to {
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: var(--first-color);
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.progress-line.javascript span{
+    width: 95%;
+}
+.progress-line.csharp span{
+    width: 93%;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.react span{
+    width: 80%;
+}
+.progress-line.sql span{
+    width: 85%;
+}
+.progress-line.architecture span{
+    width: 75%;
+}
+.progress-line.agile span{
+    width: 95%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2{
+    100%{
         opacity: 1;
     }
 }
+
+.progress-line.javascript span::after{
+    content: "95%";
+}
+.progress-line.csharp span::after{
+    content: "93%";
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.react span::after{
+    content: "80%";
+}
+.progress-line.sql span::after{
+    content: "85%";
+}
+.progress-line.architecture span::after{
+    content: "75%";
+}
+.progress-line.agile span::after{
+    content: "95%";
+}
+
+/*==================== QUALIFICATION ====================*/
+
+
+/*==================== SERVICES ====================*/
+
+
+/* Active Modal */
+
+
+/*==================== PORTFOLIO ====================*/
+.carousel__shadow{
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+a {
+    color: var(--text-color);
+    font-size: 30px;
+}
+
+a:hover{
+    color: var(--first-color);
+}
+
+.card__border{
+    border-top: 5px solid var(--first-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*==================== PROJECT IN MIND ====================*/
+
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+@media screen and (max-width:767px) {
+    .home__thumbnail {
+        width: 200px;
+    }
+}
+
+/* For medium devices */
+
+@media screen and (min-width: 768px) {
+    .header__nav {
+        top: 0;
+        bottom: initial;
+        position: sticky;
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        column-gap: 1rem;
+    }
+
+    .nav__icon,
+    .nav__close,
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+    .nav__menu {
+        margin-left: auto;
+    }
+
+    .container__colour {
+        height: 40%;
+        padding: 0px !important;
+    }
+
+    .home__thumbnail {
+        width: 300px;
+    }
+}
+
+/* For large devices */

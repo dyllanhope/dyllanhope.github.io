@@ -363,7 +363,7 @@ img {
     width: 75%;
 }
 .progress-line.agile span{
-    width: 95%;
+    width: 90%;
 }
 
 .bar .progress-line span::before{
@@ -420,7 +420,7 @@ img {
     content: "75%";
 }
 .progress-line.agile span::after{
-    content: "95%";
+    content: "90%";
 }
 
 /*==================== QUALIFICATION ====================*/

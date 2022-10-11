@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "portfolio overhaul",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dyllanhope.github.io",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dyllanhope.github.io"
+  },
+  "author": "Dyllan Hope",
+  "license": "ISC",
+  "homepage": "https://dyllanhope.github.io/",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
